@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Home</title>
+	<style>
+		.logo {
+			width: 100px;
+			margin-left: 20px;
+			margin-top: 20px;
+		}
+		.grid{
+			display: flex;
+		}
+		.header-container{
+			display: flex;
+			flex-direction: column;
+		}
+		.ml-container{
+			font-family: Arial, Helvetica, sans-serif;
+		}
+		.title{
+			color: #FCB700;
+			margin-bottom: -5px;
+		}
+		.button{
+			color: white;
+			background: black;
+			font-size: 20px;
+			border-radius: 10px;
+			height: 40px;
+			width: 100px;
+		}
+		</style>
+</head>
+<body>
+
+	<header>
+		<div>
+		<div class="grid">
+		<img class="logo" src ='https://nuclio.school/wp-content/uploads/2019/10/logo-nuclio-2019.png'>	
+	    </div>	
+	</header>
+
+	<div class="ml-container" align="center">
+		<div class="header-container">
+			<h2 class="title" align="center">Sentiment Analysis Application Containerization using Docker</h2>
+		   	<h3 align="center">Twitter Sentiment Analysis</h3>
+		</div>
+		<form action="{{ url_for('predict')}}" method="POST">
+		<p>Enter your message here</p>
+		<!-- <input type="text" name="comment"/> -->
+		<textarea name="message" rows="6" cols="60"></textarea>
+		<br/>
+		<br/>
+		<input type="submit" class="button" value="Predict">
+		
+	</form>
+		
+	</div>
+
+</body>
+</html>

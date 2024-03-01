@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Sentiment Analysis</title>
+	<style>
+				.logo {
+			width: 100px;
+			margin-left: 20px;
+			margin-top: 20px;
+		}
+		.grid{
+			display: flex;
+		}
+		.header-container{
+			display: flex;
+			flex-direction: column;
+		}
+		.ml-container{
+			font-family: Arial, Helvetica, sans-serif;
+			margin-top: 50px;
+		}
+		.title{
+			color: #FCB700;
+			margin-bottom: -5px;
+			font-family: Arial, Helvetica, sans-serif;
+		}
+		.button{
+			color: white;
+			background: black;
+			font-size: 20px;
+			border-radius: 10px;
+			height: 40px;
+			width: 100px;
+		}
+		.image{
+			height: 300px
+		}
+	</style>
+</head>
+<body>
+     
+	<header>
+		<div class="container">
+			<div id="brandname">
+				<h2 class="title" align="center">Sentiment Analysis Result</h2>
+			</div>
+		</div>
+	</header>
+
+	<div class="ml-container">
+	
+	<div class="results" align="center">
+		
+		{% if prediction == 1%}
+		<img class="image" src="https://i.pinimg.com/564x/ea/71/0b/ea710bb98ffa30b2db26ec18b2e2263a--meme-caption-meme-maker.jpg">
+		<h2 style="color:#C44837;">NEGATIVE</h2>
+		{% elif prediction == 0%}
+		<img class="image" src="https://welldoing.org/storage/app/uploads/public/553/50b/f2e/55350bf2e040f117350290.jpg">
+		<h2 style="color:#81A36D;">POSITIVE</h2>
+		{% endif %}
+		
+		<a href="..">
+		<input class="button" type="submit" value="Back">
+		</a>
+	</div>
+</div>
+
+</body>
+</html>
